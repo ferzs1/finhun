@@ -1,0 +1,39 @@
+.navbar{
+	border-radius:0;
+	margin:0;
+}
+
+
+.bg-blue{
+	background-color:#EEEEEE;
+}
+
+
+.btn-group,
+.btn-group-vertical{
+	vertical-align:top;
+}
+
+
+ul.nav li a, ul.nav li a:visited {
+    color: #aaaaaa !important;
+}
+
+ul.nav li a:hover, ul.nav li a:active {
+    color: #aaaaaa !important;
+}
+
+ul.nav li.active a {
+    color: #aaaaaa !important;
+}
+
+.dark-link a{
+	color: #000000 !important;
+}
+
+
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+	.rwd-break {
+		display: block !important;
+}
