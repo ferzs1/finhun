@@ -48,6 +48,7 @@ print '<!DOCTYPE html>
                     <ul class="navbar-nav nav">
                         <a class="nav-link" href="login.cgi">Login</a>
                         <a class="nav-link" href="register.cgi">Register</a>
+                        <a class="nav-link" href="sugo.html">Help</a>
 
 						<li class="dropdown">
 							<a class="nav-link dropdown-toggle" href="index.html" data-toggle="dropdown"><img src="hu.png" /><span class="pl-2">magyar</span>
@@ -82,7 +83,8 @@ print '<!DOCTYPE html>
             <div class="col-md-8 push-md-4 offset-md-1">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Koira</h3>
+						<!-- csak egy betű lesz nagy, a többi 18-as-->
+						<h2 class="text-uppercase"><strong>K<span style="font-size:18pt;">oira</span></strong></h2>
                     </div>
                 </div>
                 <div class="row">
@@ -142,6 +144,7 @@ print '<!DOCTYPE html>
                     <a href="" class="btn btn-outline-info">Táblázatok</a>
                     <a href="" class="btn btn-outline-info">Összes szó</a>
                     <a href="" class="btn btn-outline-info">Frázisok</a>
+                    <a href="" class="btn btn-outline-info">Gyakoriság <br class="rwd-break" style="display:none;"/>szerinti <br class="rwd-break" style="display:none;"/>rendezés</a>
                     <a href="" class="btn btn-outline-info">Szólások, <br class="rwd-break" style="display:none;"/>közmondások</a>
                 </div>
             </div><!-- end of GOMBOK -->
