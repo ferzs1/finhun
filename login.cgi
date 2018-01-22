@@ -13,8 +13,8 @@ print '<!DOCTYPE html>
         <title>Sunkari</title>
         <meta name="description" content="Sunkari finn-magyar online szótár">
         <meta name="author" content="Zsanett Ferenczi">
-        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="font/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <script>
         </script>
         <!--[if lt IE 9]>
@@ -58,32 +58,32 @@ print '<!DOCTYPE html>
         <!-- LOGIN FORM  -->
         <div class="row">
             <div class="col-md-4 offset-4">
-                <div class="text-center" style="padding:50px 0">
-                    <div class="logo">login</div>
+                <div class="text-center">
+                    <div class="logo mb-4">Belépés</div>
                         <!-- Main Form -->
-                        <div class="login-form-1">
+                        <div class="login-form-1 ">
                             <form id="login-form" class="text-left">
                                 <div class="login-form-main-message"></div>
                                 <div class="main-login-form">
                                     <div class="login-group">
                                         <div class="form-group">
-                                            <label for="lg_username" class="sr-only">Username</label>
-                                                <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+                                            <label for="lg_username" class="sr-only">Felhasználónév</label>
+                                                <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="felhasználónév">
                                         </div>
                                         <div class="form-group">
-                                            <label for="lg_password" class="sr-only">Password</label>
-                                            <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+                                            <label for="lg_password" class="sr-only">Jelszó</label>
+                                            <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="jelszó">
                                        </div>
                                        <div class="form-group login-group-checkbox">
                                            <input type="checkbox" id="lg_remember" name="lg_remember">
-                                           <label for="lg_remember">remember</label>
+                                           <label for="lg_remember">emlékezzen rám</label>
                                        </div>
                                    </div>
-                                   <button type="submit" class="login-button"><i class="fa-ul fa fa-chevron-right"></i></button>
+                                   <button type="submit" class="btn btn-block btn-info mb-4"><i class="fa fa-chevron-right"></i></button>
                                </div>
                                <div class="etc-login-form">
-                                   <p>forgot your password? <a href="#">click here</a></p>
-                                   <p>new user? <a href="#">create new account</a></p>
+                                   <small>elfelejtetted a jelszavad? <a href="#">kattints ide</a></small><br/>
+                                   <small>nincs még fiókod? <a href="#">regisztráció</a></small>
                                </div>
                             </form>
                         </div>
