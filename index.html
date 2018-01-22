@@ -44,7 +44,7 @@
                     <ul class="navbar-nav nav">
                         <a class="nav-link" href="login.html">Login</a>
                         <a class="nav-link" href="register.html">Register</a>
-
+                        <a class="nav-link" href="sugo.html">Help</a>
 						<li class="dropdown">
 							<a class="nav-link dropdown-toggle" href="index.html" data-toggle="dropdown"><img src="hu.png" /><span class="pl-2">magyar</span>
 						        <span class="caret"></span></a>
@@ -63,7 +63,7 @@
                 <div class="offset-md-4 offset-lg-4 offset-xl-4 offset-sm-2 col-md-8 col-lg-8 col-xl-8 col-xs-2 col-sm-8">
                     <form class="form" action="">
                         <div class="input-group">
-                           <input type="text" class="form-control">
+                           <input type="text" class="form-control" id="search">
                            <span class="input-group-btn pl-1">
                                 <button class="btn btn-outline-danger" type="button">Keres</button>
                            </span>
@@ -78,7 +78,8 @@
             <div class="col-md-8 push-md-4 offset-md-1">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Koira</h3>
+						<!-- csak egy betű lesz nagy, a többi 18-as-->
+						<h2 class="text-uppercase"><strong>K<span style="font-size:18pt;">oira</span></strong></h2>
                     </div>
                 </div>
                 <div class="row">
@@ -112,7 +113,7 @@
                                 <li><i class="fa-li fa fa-angle-right"></i>más jelentés</li>
                             </ul>
                             <div class="card border-info mb-4 offset-1">
-                                <div class="card-header border-info bg-blue">
+                                <div class="card-header border-info bg-info text-white">
                                     <h6 class="card-title mb-0 pb-0">Példamondat finnül hosszabban</h6>
                                 </div>
                                 <div class="card-body">
@@ -137,6 +138,7 @@
                 <div class="btn-group-vertical btn-group-md btn-block">
                     <a href="" class="btn btn-outline-info">Táblázatok</a>
                     <a href="" class="btn btn-outline-info">Összes szó</a>
+                    <a href="" class="btn btn-outline-info">Gyakoriság szerinti rendezés</a>
                     <a href="" class="btn btn-outline-info">Frázisok</a>
                     <a href="" class="btn btn-outline-info">Szólások, <br class="rwd-break" style="display:none;"/>közmondások</a>
                 </div>
