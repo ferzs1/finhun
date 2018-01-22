@@ -1,6 +1,8 @@
-<!DOCTYPE html>
+#! /usr/bin/perl
+use CGI;
 
-
+print "Content-Type: text/html\n\n";
+print '<!DOCTYPE html>
 <html lang="hu">
     <head>
         <!-- Required meta tags -->
@@ -14,44 +16,6 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="font/css/font-awesome.min.css">
         <script>
-            $(document).ready(function(){
-                use strict";
-                    
-                // Options for Message
-                //----------------------------------------------
-                var options = {
-                    'btn-loading': '<i class="fa fa-spinner fa-pulse"></i>',
-                    'btn-success': '<i class="fa fa-check"></i>',
-                    'btn-error': '<i class="fa fa-remove"></i>',
-                    'msg-success': 'All Good! Redirecting...',
-                    'msg-error': 'Wrong login credentials!',
-                    'useAJAX': true,
-                };
-
-                // Login Form
-                // Validation
-                $("#login-form").validate({
-                    rules: {
-                    lg_username: "required",
-                    lg_password: "required",
-                    },
-                    errorClass: "form-invalid"
-                });
-                                                                                                                
-                // Form Submission
-                $("#login-form").submit(function() {
-                    remove_loading($(this));
-                    if(options['useAJAX'] == true)
-                    {
-                        // Dummy AJAX request (Replace this with your AJAX code)
-                        // If you don't want to use AJAX, remove this
-                        dummy_submit_form($(this));                                                                                                                                                                 
-                        // Cancel the normal submission.
-                        // If you don't want to use AJAX, remove this
-                        return false;
-                    }
-                });
-            });
         </script>
         <!--[if lt IE 9]>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -62,7 +26,7 @@
         <div class="container">
         <!--  NAVBAR  -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
-            <a class="navbar-brand" href="#">Sunkari</a>
+            <a class="navbar-brand" href="index.cgi">Sunkari</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -70,7 +34,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Dictionary <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.cgi">Dictionary</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"></a>
@@ -79,8 +43,14 @@
                     <ul class="navbar-nav">
                         <a class="nav-link" href="#">Login</a>
                         <a class="nav-link" href="#">Register</a>
-                        <a class="nav-link" href="#">U</a>
-                        <a class="nav-link" href="#">S</a>
+
+						<li class="dropdown">
+							<a class="nav-link dropdown-toggle" href="index.html" data-toggle="dropdown"><img src="hu.png" /><span class="pl-2">magyar</span>
+						        <span class="caret"></span></a>
+        					<ul class="dropdown-menu">
+								<li class="dark-link"><a href="fi_index.html"><img src="fi.png" /><span class="pl-2">suomi</span></a></li>
+        					</ul>
+      					</li>
                     </ul>
                 </div>
         </nav>
@@ -130,5 +100,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     </body>
-</html>
+</html>';
+
