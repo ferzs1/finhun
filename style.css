@@ -37,13 +37,21 @@ ul.nav li.active a {
 	.rwd-break {
 		display: block !important;
 }
-}
+
 
 @media screen and (max-width: 1200px) and (min-width: 991px) {
 	.rwd-break {
 		display: block !important;
 }
+
+.navbar-nav .dropdown-menu .show{
+    min-width: 7rem !important;
+    border:0;
+    background-color: #333333;
+    padding-left:.5rem;
 }
+
+
 
 .etc-login-form {
     color: #919191;

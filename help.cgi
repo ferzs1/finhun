@@ -14,6 +14,7 @@ print '<!DOCTYPE html>
     <title>Sunkari</title>
     <meta name="description" content="Sunkari finn-magyar online szótár">
     <meta name="author" content="Zsanett Ferenczi">
+    <script src="lib/marked.js"></script>
     <script>
         $(document).ready(function(){
             //sajat script
@@ -83,61 +84,22 @@ print '<!DOCTYPE html>
                 <div class="row">
                     <div class="col-md-12">
 						<!-- csak egy betű lesz nagy, a többi 18-as-->
-						<h2 class="text-uppercase"><strong>K<span style="font-size:18pt;">oira</span></strong></h2>
+						<h2 class="text-uppercase"><strong>S<span style="font-size:18pt;">úgó</span></strong></h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="text-hidden">főnév, 2a</p>
+                        <!-- markdown fileok? -->
+                        <div id="content"></div>
+                        <script>
+                            document.getElementById("content").innerHTML =
+                                  marked("* render \n* render 2\n* render 3");
+                        </script>
                     </div>
                 </div>
 
-                <div class="meaning">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <ul class="fa-ul">
-                                <li><i class="fa-li fa fa-angle-right"></i>kutya, eb</li>
-                            </ul>
-                            <div class="card border-info mb-4 offset-1">
-                                <div class="card-header border-info bg-info text-white">
-                                    <h6 class="card-title mb-0 pb-0">Példamondat finnül hosszabban</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">Példamondat magyarul hosszabban</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- div meaning end -->
-
-                <div class="meaning">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <ul class="fa-ul">
-                                <li><i class="fa-li fa fa-angle-right"></i>más jelentés</li>
-                            </ul>
-                            <div class="card border-info mb-4 offset-1">
-                                <div class="card-header border-info bg-blue">
-                                    <h6 class="card-title mb-0 pb-0">Példamondat finnül hosszabban</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">Példamondat magyarul hosszabban</p>
-                                </div>
-                            </div>
-                            <div class="card border-info mb-4 offset-1">
-                                <div class="card-header border-info bg-info text-white">
-                                    <h6 class="card-title mb-0 pb-0">Példamondat finnül hosszabban</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">Példamondat magyarul hosszabban</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- div meaning end -->
-
             </div><!-- end of entry layout -->
-            <!-- GOMBOK -->
+            <!-- TARTALOMJEGYZÉK -->
             <div class="col-md-3 order-md-first">
                 <div class="btn-group-vertical btn-group-md btn-block">
                     <a href="tables.cgi" class="btn btn-outline-info">Táblázatok</a>
@@ -146,7 +108,7 @@ print '<!DOCTYPE html>
                     <a href="freq.cgi" class="btn btn-outline-info">Gyakoriság <br class="rwd-break" style="display:none;"/>szerinti <br class="rwd-break" style="display:none;"/>rendezés</a>
                     <a href="proverbs.cgi" class="btn btn-outline-info">Szólások, <br class="rwd-break" style="display:none;"/>közmondások</a>
                 </div>
-            </div><!-- end of GOMBOK -->
+            </div><!-- end of TARTALOMJEGYZÉK -->
 
         </div><!-- end of BOTTOM -->
     </div><!-- end of container -->

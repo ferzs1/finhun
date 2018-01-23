@@ -139,12 +139,16 @@ print '<!DOCTYPE html>
             </div><!-- end of entry layout -->
             <!-- GOMBOK -->
             <div class="col-md-3 order-md-first">
-                <div class="btn-group-vertical btn-group-md btn-block">
+                <div class="btn-group-vertical btn-group-md btn-block mb-5">
                     <a href="tables.cgi" class="btn btn-outline-info">Táblázatok</a>
                     <a href="words.cgi" class="btn btn-outline-info">Összes szó</a>
                     <a href="phrases.cgi" class="btn btn-outline-info">Frázisok</a>
-                    <a href="freq.cgi" class="btn btn-outline-info">Gyakoriság <br class="rwd-break" style="display:none;"/>szerinti <br class="rwd-break" style="display:none;"/>rendezés</a>
+                    <a href="freq.cgi" class="btn btn-outline-info">1000 <br class="rwd-break" style="display:none;"/>leggyakoribb <br class="rwd-break" style="display:none;"/>szó</a>
                     <a href="proverbs.cgi" class="btn btn-outline-info">Szólások, <br class="rwd-break" style="display:none;"/>közmondások</a>
+                </div>
+                <div class="wod">
+                    <h3 class="text-center">A nap szava</h3>
+                    <a href="">KOIRA</a>
                 </div>
             </div><!-- end of GOMBOK -->
 
