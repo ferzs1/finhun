@@ -41,8 +41,8 @@ print '<!DOCTYPE html>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
-                        <a class="nav-link" href="#">Belépés</a>
-                        <a class="nav-link" href="register.cgi">Regisztráció</a>
+                        <a class="nav-link" href="login.cgi">Belépés</a>
+                        <a class="nav-link" href="#">Regisztráció</a>
                         <a class="nav-link" href="help.cgi">Súgó</a>
 
 						<li class="dropdown">
@@ -58,7 +58,7 @@ print '<!DOCTYPE html>
         <!-- END OF NAVBAR  -->
         <!-- LOGIN FORM  -->
         <div class="row">
-            <div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-xs-10 offset-xs-1">
+            <div class="col-md-4 offset-md-4 col-sm-10 offset-sm-1 col-xs-10 offset-xs-1">
                 <div class="text-center">
                     <div class="logo mb-4">Belépés</div>
                         <!-- Main Form -->
@@ -75,15 +75,17 @@ print '<!DOCTYPE html>
                                             <label for="lg_password" class="sr-only">Jelszó</label>
                                             <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="jelszó">
                                        </div>
-                                       <div class="form-group login-group-checkbox" id="noborder">
-                                           <input type="checkbox" id="lg_remember" name="lg_remember">
-                                           <label for="lg_remember">emlékezzen rám</label>
+                                        <div class="form-group">
+                                            <label for="lg_email" class="sr-only">E-mail cím</label>
+                                            <input type="email" class="form-control" id="lg_email" name="lg_email" placeholder="e-mail cím">
+                                       </div>
+                                        <div class="form-group">
+                                            <label for="lg_db" class="sr-only">Születésnap</label>
+                                            <input type="db" class="form-control" id="lg_db" name="lg_db" placeholder="születésnap">
                                        </div>
                                    </div>
+								   <br/><br/>
                                    <button type="submit" class="btn btn-block btn-info mb-4"><i class="fa fa-chevron-right"></i></button>
-                               </div>
-                               <div class="etc-login-form">
-                                   <small>nincs még fiókod? <a href="register.cgi">regisztráció</a></small>
                                </div>
                             </form>
                         </div>
