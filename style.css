@@ -8,6 +8,10 @@
 	background-color:#EEEEEE;
 }
 
+#under{
+	text-decoration: underline !important;
+}
+
 
 .btn-group,
 .btn-group-vertical{
@@ -51,6 +55,9 @@ ul.nav li.active a {
     padding-left:.5rem;
 }
 
+img{
+	vertical-align: bottom !important;
+}
 
 
 .etc-login-form {

@@ -84,13 +84,13 @@ print '<!DOCTYPE html>
                                             <input type="email" class="form-control" id="reg_email" name="reg_email" placeholder="e-mail cím">
                                        </div>
                                         <div class="form-group">
-                                            <label for="reg_dateofbirth" class="sr-only">Születésnap</label>
+                                            <label for="reg_dateofbirth" class="">Születésnap</label>
                                             <input type="date" value="2000-01-01" class="form-control" id="reg_db" name="reg_db">
                                        </div>
                                        <!-- HÍRLEVÉL 
 									   	<div class="form-group login-group-checkbox" id="noborder">
-                                           <input type="checkbox" id="reg_remember" name="reg_remember">
-                                           <label for="lg_remember">kérek hírlevelet</label>
+                                           <input type="checkbox" id="reg_post" name="reg_post">
+                                           <label for="reg_mail">kérek hírlevelet</label>
                                        </div>   -->
                                    </div>
                                    <button type="submit" class="btn btn-block btn-info mb-4"><i class="fa fa-chevron-right"></i></button>

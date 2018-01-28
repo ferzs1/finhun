@@ -58,7 +58,7 @@ print '<!DOCTYPE html>
         <!-- END OF NAVBAR  -->
         <!-- LOGIN FORM  -->
         <div class="row">
-            <div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-xs-10 offset-xs-1">
+            <div class="col-md-4 offset-md-4 col-sm-8 offset-sm-2 col-xs-10 offset-xs-1">
                 <div class="text-center">
                     <div class="logo mb-4">Belépés</div>
                         <!-- Main Form -->

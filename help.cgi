@@ -62,39 +62,29 @@ print '<!DOCTYPE html>
                     </ul>
                 </div>
         </nav>
-        <!-- SEARCH BAR  -->
-        <div class="row mb-5">
-            <div class="col-md-9">
-                <div class="offset-md-4 offset-lg-4 offset-xl-4 offset-sm-2 col-md-8 col-lg-8 col-xl-8 col-xs-2 col-sm-8">
-                    <form class="form" action="">
-                        <div class="input-group">
-                           <input type="text" class="form-control">
-                           <span class="input-group-btn pl-1">
-                                <button class="btn btn-outline-danger" type="button">Keres</button>
-                           </span>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div> <!-- search bar vége -->
         <!-- BOTTOM  -->
         <div class="row mb-5">
             <!-- ENTRY LAYOUT  -->
             <div class="col-md-8 push-md-4 offset-md-1">
                 <div class="row">
                     <div class="col-md-12">
-						<!-- csak egy betű lesz nagy, a többi 18-as-->
-						<h2 class="text-uppercase"><strong>S<span style="font-size:18pt;">úgó</span></strong></h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
                         <!-- markdown fileok? -->
-                        <div id="content"></div>
-                        <script>
+                        <div id="content">
+							<h2>Súgó</h2>
+							<p>Leírása ennek</p>
+							<div>
+								<a name="bevezetes">Bevezetes</a>
+								<p>Lorem ipsum dolor sit amet..Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.LoremLorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet...</p>
+							</div>
+							<div>
+								<a name="vege">Vége</a>
+								<p>Lorem ipsum dolor sit amet .Lorem ipsum dolor sit amet..Lorem ipsum dolor sit amet..Lorem ipsum dolor sit amet..Lorem ipsum dolor sit amet.<Lorem ipsum dolor sit amet./Lorem ipsum dolor sit amet.pLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum doLorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.lor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet...</p>
+							</div>
+						</div>
+                        <!--<script>
                             document.getElementById("content").innerHTML =
-                                  marked("* render \n* render 2\n* render 3");
-                        </script>
+							marked("### Sunkari - Finn-magyar-finn kétnyelvű online szótár");
+                        </script>-->
                     </div>
                 </div>
 
@@ -102,9 +92,9 @@ print '<!DOCTYPE html>
             <!-- TARTALOMJEGYZÉK -->
             <div class="col-md-3 order-md-first">
                 <div class="btn-group-vertical btn-group-md btn-block">
-                    <a href="tables.cgi" class="btn btn-outline-info">Táblázatok</a>
-                    <a href="words.cgi" class="btn btn-outline-info">Összes szó</a>
-                    <a href="phrases.cgi" class="btn btn-outline-info">Frázisok</a>
+                    <a href="#bevezetes" class="btn btn-outline-info">Első lépések</a>
+                    <a href="#vege" class="btn btn-outline-info">A szótár használata</a>
+                    <a href="phrases.cgi" class="btn btn-outline-info">Nincs a szótárban a szó, amit keresek</a>
                     <a href="freq.cgi" class="btn btn-outline-info">Gyakoriság <br class="rwd-break" style="display:none;"/>szerinti <br class="rwd-break" style="display:none;"/>rendezés</a>
                     <a href="proverbs.cgi" class="btn btn-outline-info">Szólások, <br class="rwd-break" style="display:none;"/>közmondások</a>
                 </div>
