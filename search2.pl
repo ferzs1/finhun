@@ -1,14 +1,12 @@
 #! /usr/bin/perl
 use CGI;
 use DBI;
-use CGI::Session;
 use strict;
 use warnings;
 
 my $cgi = CGI->new();
-my $session  = CGI::Session->new($cgi) or die CGI->Session->errstr;
-my $username = $cgi->param('username') // '';
 my $searchword = $cgi->param('search');
+print "Content-type:text/html; charset=UTF-8\n\n";
 
 
 my $driver = "mysql";
@@ -28,6 +26,7 @@ while (my @row = $sth->fetchrow_array()) {
    ($word) = @row;
 }
 
-print $cgi->redirect('../index2.cgi');
+print "$searchword kerested<br/>$word a szó";
+
 
 $sth->finish();

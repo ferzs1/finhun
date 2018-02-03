@@ -64,9 +64,9 @@ session_start();
         <div class="row mb-5">
             <div class="col-md-9">
                 <div class="offset-md-4 offset-lg-4 offset-xl-4 offset-sm-2 col-md-8 col-lg-8 col-xl-8 col-xs-2 col-sm-8">
-                    <form class="form" method="post" id="form" action="cgi-bin/ih.php">
+                    <form class="form" method="post" id="form" action="cgi-bin/search_form.php">
                         <div class="input-group">
-                           <input type="text" class="form-control" name="word" id="word_search"> 
+                           <input type="text" class="form-control" name="word" id="word_search">
                            <span class="input-group-btn pl-1">
                                 <input class="btn btn-outline-danger" type="submit" name="submit" value="Submit" id="btnbtn">
                            </span>
@@ -79,8 +79,45 @@ session_start();
         <div class="row mb-5">
             <!-- ENTRY LAYOUT  -->
             <div class="col-md-8 push-md-4 offset-md-1" id="content">
-				<?php echo $_SESSION['word']; ?>
+              <?php if($_SESSION['info']['success'] == true)
+              {
+                  echo '
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h2 class="text-uppercase"><strong>'. substr($_SESSION['info']['word'], 0, 1) .'<span style="font-size:18pt;">' . substr($_SESSION['info']['word'], 1) . '</span></strong></h2>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="text-hidden">';
+                    echo  $_SESSION['info']['pos'] . ', ' . $_SESSION['info']['cat'];
+                   echo '</p>
+                        </div>
+                        </div>';
+                // FOR LOOP
+                  echo '
+                    <div class="meaning">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="fa-ul">
+                                    <li><i class="fa-li fa fa-angle-right"></i>kutya, eb</li>
+                                </ul>
+                                <div class="card border-info mb-4 offset-1">
+                                    <div class="card-header border-info bg-info text-white">
+                                        <h6 class="card-title mb-0 pb-0">Példamondat finnül hosszabban</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Példamondat magyarul hosszabban</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div> <!-- div meaning end -->';
 
+              }
+            //session_destroy();
+            unset($_SESSION['info']);
+          ?>
 			</div>
             <!-- GOMBOK -->
             <div class="col-md-3 order-md-first">
@@ -100,11 +137,6 @@ session_start();
 			</div><!-- end of GOMBOK -->
 		</div><!-- end of BOTTOM -->
     </div><!-- end of container -->
-    <script>
-		function load_wd(word){
-			document.getElementById("content").innerHTML = word;
-		}
-    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

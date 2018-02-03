@@ -1,8 +1,17 @@
-<?php
-session_start();
-?>
+#! /usr/bin/perl
 
+#use CGI::Session;
+use strict;
+use warnings;
+use CGI;
 
+#my $cgi      = new CGI;
+my $cgi = CGI->new();
+#my $session  = CGI::Session->new($cgi) or die CGI->Session->errstr;
+
+#my $username = $session->param('username');
+print "Content-type:text/html; charset=UTF-8\n\n";
+print qq|
 <!DOCTYPE html>
 
 <html lang="hu">
@@ -64,9 +73,9 @@ session_start();
         <div class="row mb-5">
             <div class="col-md-9">
                 <div class="offset-md-4 offset-lg-4 offset-xl-4 offset-sm-2 col-md-8 col-lg-8 col-xl-8 col-xs-2 col-sm-8">
-                    <form class="form" method="post" id="form" action="cgi-bin/ih.php">
+                    <form class="form" method="post" id="form" action="cgi-bin/search.pl">
                         <div class="input-group">
-                           <input type="text" class="form-control" name="word" id="word_search"> 
+                           <input type="text" class="form-control" name="search" id="word_search"> 
                            <span class="input-group-btn pl-1">
                                 <input class="btn btn-outline-danger" type="submit" name="submit" value="Submit" id="btnbtn">
                            </span>
@@ -79,8 +88,6 @@ session_start();
         <div class="row mb-5">
             <!-- ENTRY LAYOUT  -->
             <div class="col-md-8 push-md-4 offset-md-1" id="content">
-				<?php echo $_SESSION['word']; ?>
-
 			</div>
             <!-- GOMBOK -->
             <div class="col-md-3 order-md-first">
@@ -114,3 +121,4 @@ session_start();
     <script src="script.js"></script>
 </body>
 </html>
+|;
